@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusTunes - Enhanced</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>🎵 FocusTunes</h1>
+  <div class="container">
+    <label for="task">What are you working on?</label>
+    <select id="task">
+      <option value="study">Studying</option>
+      <option value="coding">Coding</option>
+      <option value="writing">Writing</option>
+      <option value="relax">Relaxing</option>
+      <option value="reading">Reading</option>
+      <option value="household_work">Household Working</option>
+    </select>
+
+    <label for="mood">Mood (Stressed - Relaxed):</label>
+    <input type="range" id="mood" min="0" max="10" value="5" />
+    <div class="range-value">Value: <span id="moodValue">5</span></div>
+
+    <label for="energy">Energy Level:</label>
+    <input type="range" id="energy" min="0" max="10" value="5" />
+    <div class="range-value">Value: <span id="energyValue">5</span></div>
+
+    <button onclick="generatePlaylist()">🎧 Generate Playlist</button>
+
+    <div class="playlist" id="playlist"></div>
+    <div class="stats" id="sessionStats"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
